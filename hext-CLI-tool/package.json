@@ -19,9 +19,15 @@
   "author": "Harshwardhan Yadav",
   "license": "MIT",
   "dependencies": {
+    "boxen": "^8.0.1",
+    "chalk": "^6.0.0",
     "express": "^5.2.1",
     "fs-extra": "^11.3.2",
-    "prompts": "^2.4.2"
+    "gradient": "^0.2.0",
+    "ora": "^9.4.1",
+    "prompts": "^2.4.2",
+    "validate": "^5.2.0",
+    "validate-npm-package-name": "^8.0.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
