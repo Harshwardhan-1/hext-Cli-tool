@@ -7,23 +7,23 @@ Generate fully configured **Express.js** backends in seconds with an interactive
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🚀 Interactive project generator
-- 📦 JavaScript & TypeScript support
-- 📦 Supports npm, pnpm, Yarn, and Bun
-- ⚡ Express.js project scaffolding
-- 🗄️ Database selection
-- 🔗 ORM / ODM configuration
-- 🔐 Authentication setup
-- 🧪 Testing framework selection
-- 🛠️ Optional project features
-- 📁 Clean and maintainable project structure
-- 📄 Ready-to-use project templates
+-  Interactive project generator
+-  JavaScript & TypeScript support
+-  Supports npm, pnpm, Yarn, and Bun
+-  Express.js project scaffolding
+-  Database selection
+-  ORM / ODM configuration
+-  Authentication setup
+-  Testing framework selection
+-  Optional project features
+-  Clean and maintainable project structure
+-  Ready-to-use project templates
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 Create a new project:
 
@@ -35,7 +35,7 @@ Follow the interactive prompts to configure your project.
 
 ---
 
-## ⚙️ Interactive Configuration
+## Interactive Configuration
 
 During project creation, JEXTS allows you to customize your project with the following options:
 
@@ -51,7 +51,7 @@ During project creation, JEXTS allows you to customize your project with the fol
 
 ---
 
-## 📦 Generated Project Structure
+##  Generated Project Structure
 
 ```text
 project-name/
@@ -65,7 +65,7 @@ The generated project is fully configured based on the options you selected duri
 
 ---
 
-## ▶️ Usage
+##  Usage
 
 Move into your project:
 
@@ -88,14 +88,14 @@ npm start
 
 ---
 
-## 📋 Requirements
+##  Requirements
 
 - Node.js **18+**
 - npm (or pnpm, Yarn, Bun)
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome!
 
@@ -106,6 +106,6 @@ If you find a bug, have a feature request, or would like to improve **HEXT**, fe
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License**.
