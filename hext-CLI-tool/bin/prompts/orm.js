@@ -1,6 +1,7 @@
 import prompts from 'prompts';
 
 export async function promptORM(database){
+    //skip database when np database is selected
     if(database=="none"){
         return "none";
     }
@@ -36,9 +37,9 @@ export async function promptORM(database){
     const response=await prompts({
         type:"select",
         name:"orm",
-        message: database === "mongodb" ? "ODM / ORM" : "ORM",
+        message: "ORM / ODM",
         initial:0,
         choices,
     });
-    return response.orm;
+    return response.orm?? "none";
 }

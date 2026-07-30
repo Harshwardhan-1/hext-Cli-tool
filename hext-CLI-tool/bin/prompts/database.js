@@ -29,5 +29,5 @@ const response=await prompts({
         }
     ]
 });
-return response.database;
+return response.database ?? "none";
 }

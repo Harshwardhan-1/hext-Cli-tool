@@ -1,64 +1,111 @@
-u don’t need to install globally. Use npm create:
+# HEXT
 
-npm create hext@latest
+![HEXTS Banner](./assets/logo.png)
+> A modern CLI for scaffolding production-ready Express.js applications.
 
-**hext** is a Node.js CLI tool to quickly scaffold **Express backend projects** in JavaScript or TypeScript.  
-It simplifies project setup so you can start coding immediately.
-
----
-
-## Features
-
-- Generate a ready-to-use Express backend in **JS or TS**  
-- Pre-configured folder structure with templates  
-- Works with `npm create` for fast project initialization  
+Generate fully configured **Express.js** backends in seconds with an interactive setup experience.
 
 ---
 
-## Installation
+## ✨ Features
 
-You don’t need to install globally. Use **npm create**:
+- 🚀 Interactive project generator
+- 📦 JavaScript & TypeScript support
+- 📦 Supports npm, pnpm, Yarn, and Bun
+- ⚡ Express.js project scaffolding
+- 🗄️ Database selection
+- 🔗 ORM / ODM configuration
+- 🔐 Authentication setup
+- 🧪 Testing framework selection
+- 🛠️ Optional project features
+- 📁 Clean and maintainable project structure
+- 📄 Ready-to-use project templates
+
+---
+
+## 🚀 Quick Start
+
+Create a new project:
 
 ```bash
 npm create hext@latest
-Follow the prompts to select JavaScript or TypeScript and enter your project name.
+```
 
-Usage
-After creating your project, navigate to it:
+Follow the interactive prompts to configure your project.
 
-bash
-Copy code
+---
+
+## ⚙️ Interactive Configuration
+
+During project creation, JEXTS allows you to customize your project with the following options:
+
+| Category | Options |
+|----------|---------|
+| Language | JavaScript, TypeScript |
+| Package Manager | npm, pnpm, Yarn, Bun |
+| Database | MongoDB, PostgreSQL, MySQL, None |
+| ORM / ODM | Prisma, Drizzle, Mongoose, None |
+| Authentication | Configurable |
+| Testing | Configurable |
+| Additional Features | Optional |
+
+---
+
+## 📦 Generated Project Structure
+
+```text
+project-name/
+├── src/
+├── package.json
+├── .gitignore
+└── ...
+```
+
+The generated project is fully configured based on the options you selected during setup.
+
+---
+
+## ▶️ Usage
+
+Move into your project:
+
+```bash
 cd <project-name>
-Run development server:
+```
 
-bash
-Copy code
-# For JS projects
+Start the development server:
+
+```bash
 npm run dev
+```
 
-# For TS projects
-npm run dev
-Build and start (for TS projects):
+For TypeScript projects:
 
-bash
-Copy code
+```bash
 npm run build
 npm start
-Project Structure
-A typical generated project looks like:
+```
 
-pgsql
-Copy code
-project-name/
-├─ src/          # Source files (TS or JS)
-├─ dist/         # Compiled files (TS only)
-├─ templates/    # Predefined templates
-├─ .gitignore
-├─ node_modules/
-├─ package.json
-└─ tsconfig.json # Only for TS projects
-Contributing
-Contributions are welcome! Open an issue or pull request for improvements or fixes.
+---
 
-License
-MIT License
+## 📋 Requirements
+
+- Node.js **18+**
+- npm (or pnpm, Yarn, Bun)
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+If you find a bug, have a feature request, or would like to improve **HEXT**, feel free to:
+
+- Open an issue
+- Submit a pull request
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
