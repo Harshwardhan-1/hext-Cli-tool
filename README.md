@@ -1,6 +1,6 @@
 # HEXT
 
-![HEXTS Banner](./assets/logo.png)
+![HEXTS Banner](.hext-CLI-tool/assets/logo.png)
 > A modern CLI for scaffolding production-ready Express.js applications.
 
 Generate fully configured **Express.js** backends in seconds with an interactive setup experience.
