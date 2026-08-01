@@ -15,7 +15,7 @@ Generate fully configured **Express.js** backends in seconds with an interactive
 -  Express.js project scaffolding
 -  Database selection
 -  ORM / ODM configuration
--  Authentication setup
+-  Authentication setupc
 -  Testing framework selection
 -  Optional project features
 -  Clean and maintainable project structure
