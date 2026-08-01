@@ -21,14 +21,31 @@ export function detectPackageManager(){
 
 export function getInstallCommand(packageManager){
     switch(packageManager){
+        case "npm":
+            return{
+                command: "npm",
+                args: ["install"]
+            };
         case "pnpm":
-            return "pnpm install";
-        case "yarn":
-           return "yarn";
+           return{
+            command: "pnpm",
+            args: ["install"]
+           };
         case "bun":
-            return "bun install";
+            return{
+                command: "bun",
+                args: ["install"]
+            }
+        case "yarn":
+            return{
+              command: "yarn",
+              args: []  
+            };
         default:
-            return "npm install";
+            return{
+                command: "npm",
+                args: ["install"]
+            };
     }
 }
 
