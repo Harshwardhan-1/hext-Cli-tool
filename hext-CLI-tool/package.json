@@ -1,5 +1,5 @@
 {
-  "name": "create-jexts",
+  "name": "create-hext",
   "version": "1.0.4",
   "description": "Generate a complete Express + JavaScript/TypeScript backend project.",
   "bin": {
