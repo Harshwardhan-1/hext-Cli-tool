@@ -14,7 +14,6 @@ async function main() {
 
     showCompletion(config);
   } catch (error) {
-    showInstallError(config);
     console.log(error);
     process.exit(1);
   }

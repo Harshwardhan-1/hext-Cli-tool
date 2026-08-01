@@ -146,7 +146,7 @@ export function authMiddleware(
 
   await writeFile(
     config,
-    `src/middleware/auth.middleware.${extension}`,
+    `src/middlewares/auth.middleware.${extension}`,
     content
   );
 }

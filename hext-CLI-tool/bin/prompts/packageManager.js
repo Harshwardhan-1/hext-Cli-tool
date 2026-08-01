@@ -1,41 +1,45 @@
-import prompts from "prompts"
-import { detectPackageManager, detectPackageManager } from "../utils/packageManager"
+import prompts from "prompts";
+import { detectPackageManager } from "../utils/packageManager.js";
 
-export async function promptPackageManager(){
-    const detectPackageManager=detectPackageManager();
+export async function promptPackageManager() {
+  const detectedPackageManager = detectPackageManager();
 
-   const response=await prompts({
-    type:"select",
-    name:"packageManager",
-    message:"select package manager",
-    initial:["npm","yarn","pnpm","bun"].indexOf(detectPackageManager),
-
-    choices:[
-        {
-            title:detectPackageManager==='npm'
-            ?"npm detected"
-            :"npm",
-            value:"npm"   
-        },
-        {
-            title:detectPackageManager=== "pnpm"
-            ?"pnpm detected"
-            :"pnpm",
-            value:"pnpm",
-        },
-        {
-            title:detectPackageManager=== 'yarn'
-            ?"yarn detected"
-            :"yarn",
-            value:"yarn",
-        },
-        {
-            title:detectPackageManager=== 'bun'
-            ?"bun detected"
-            :"bun",
-            value:"bun",
-        }
+  const response = await prompts({
+    type: "select",
+    name: "packageManager",
+    message: "Package Manager",
+    initial: ["npm", "pnpm", "yarn", "bun"].indexOf(detectedPackageManager),
+    choices: [
+      {
+        title:
+          detectedPackageManager === "npm"
+            ? "npm (detected)"
+            : "npm",
+        value: "npm"
+      },
+      {
+        title:
+          detectedPackageManager === "pnpm"
+            ? "pnpm (detected)"
+            : "pnpm",
+        value: "pnpm"
+      },
+      {
+        title:
+          detectedPackageManager === "yarn"
+            ? "yarn (detected)"
+            : "yarn",
+        value: "yarn"
+      },
+      {
+        title:
+          detectedPackageManager === "bun"
+            ? "bun (detected)"
+            : "bun",
+        value: "bun"
+      }
     ]
   });
-  return response.packageManager
+
+  return response.packageManager;
 }

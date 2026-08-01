@@ -97,10 +97,9 @@ async function setupJest(config) {
 
   config.devDependencies = {
     ...config.devDependencies,
-
-    jest: "^29.0.0",
-
-    "@types/jest": "^29.0.0"
+   jest: "^29.7.0",
+  "ts-jest": "^29.4.1",
+  "@types/jest": "^29.5.14"
   };
 
 
@@ -152,7 +151,7 @@ async function createTestFile(
   await fs.ensureDir(testDir);
 
 
-  await fs.writeFile(
+  await fs.writeFile( 
     path.join(
       testDir,
       fileName

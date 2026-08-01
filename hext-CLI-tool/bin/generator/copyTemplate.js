@@ -1,21 +1,28 @@
-import fs from 'fs-extra';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { createSpinner } from '../utils/ui.js';
+import fs from "fs-extra";
+import path from "path";
+import { fileURLToPath } from "url";
+import { createSpinner } from "../utils/ui.js";
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-const _filePath=fileURLToPath(import.meta.url);
-const _dirname=path.dirname(_filePath);
-        
+export async function copyTemplate(config) {
+  const spinner = createSpinner("Copying project template").start();
 
-export async function copyTemplate(config){
-    try{
-        const spinner=createSpinner('copying project template').start();
-        const templateDir=path.join(_dirname,"..","..","templates",config.language);
-        await fs.copy(templateDir,config.targetdir);        
-        spinner.succeed('project template copied');
-    }catch(error){
-        spinner.fail("failed to copied template");
-        throw error;
-    }
+  try {
+    const templateDir = path.join(
+      __dirname,
+      "..",
+      "..",
+      "templates",
+      config.language
+    );
+
+    await fs.copy(templateDir, config.targetDir);
+
+    spinner.succeed("Project template copied");
+  } catch (error) {
+    spinner.fail("Failed to copy project template");
+    throw error;
+  }
 }

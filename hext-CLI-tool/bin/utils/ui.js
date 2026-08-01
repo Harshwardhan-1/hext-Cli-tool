@@ -1,9 +1,8 @@
-import ora from 'ora';
-import boxen from  'boxen';
-import {colors} from './color.js';
+import ora from "ora";
+import boxen from "boxen";
+import { colors } from "./color.js";
 
-
-export function divider(){
+export function divider() {
   console.log(
     colors.muted(
       "────────────────────────────────────────────────────────────"
@@ -11,30 +10,33 @@ export function divider(){
   );
 }
 
-
-export function showHeader(){
+export function showHeader() {
   console.clear();
+
   divider();
 
   console.log();
-  console.log(colors.title("                             HEXTS"));
-  console.log(colors.muted("                             Express Project Generator"));
+  console.log(colors.title("                         HEXT"));
+  console.log(colors.muted("                 Express Project Generator"));
   console.log();
+
   divider();
   console.log();
 }
 
-
-export function createSpinner(message){
+export function createSpinner(message) {
   return ora({
-    text:message,
-    color:cyan,
-  })
+    text: message,
+    color: "cyan"
+  });
 }
 
+export function showCompletion(config) {
+
+  const projectName = config.projectName;
+  const packageManager = config.packageManager;
 
 
-export function showCompletion(projectName, packageManager) {
   const runCommand =
     packageManager === "npm"
       ? "npm run dev"
@@ -42,11 +44,16 @@ export function showCompletion(projectName, packageManager) {
       ? "yarn dev"
       : `${packageManager} dev`;
 
+
   console.log();
+
+
   console.log(
     boxen(
- `${colors.success("Project created successfully.")}
-  ${colors.heading("Next steps")}
+`${colors.success("Project created successfully.")}
+
+${colors.heading("Next steps")}
+
   ${colors.primary(`cd ${projectName}`)}
   ${colors.primary(runCommand)}
 `,
@@ -57,18 +64,22 @@ export function showCompletion(projectName, packageManager) {
       }
     )
   );
+
 }
 
-
-export function showInstallError(config){
+export function showInstallError(config) {
   console.log();
+
   console.log(
     boxen(
-      `Dependency Installation failed.
-      You can continue manually:
-      cd:${config.projectName}
-      ${getInstallCommand(config.packageManager)}
-      `,{
+`Dependency installation failed.
+
+You can continue manually:
+
+cd ${config.projectName}
+${getInstallCommand(config.packageManager)}
+`,
+      {
         padding: 1,
         borderStyle: "round",
         borderColor: "yellow"
@@ -76,7 +87,6 @@ export function showInstallError(config){
     )
   );
 }
-
 
 export function getInstallCommand(packageManager) {
   switch (packageManager) {

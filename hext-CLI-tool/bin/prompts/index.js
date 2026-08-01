@@ -6,6 +6,7 @@ import { promptAuthentication } from "./authentication.js";
 import { promptORM } from "./orm.js";
 import { promptTesting } from "./testing.js";
 import { promptFeatures } from "./features.js";
+import { promptSummary } from "./summary.js";
 
 
 export async function promptUser(){
