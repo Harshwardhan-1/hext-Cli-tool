@@ -1,6 +1,6 @@
 {
   "name": "create-hext",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Generate a complete Express + JavaScript/TypeScript backend project.",
   "bin": {
     "create-hext": "bin/index.js"
