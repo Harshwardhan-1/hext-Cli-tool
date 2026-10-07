@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export async function copyTemplate(config) {
-  const spinner = createSpinner("Copying project template").start();
+   const spinner = createSpinner("Copying project template").start();
 
   try {
     const templateDir = path.join(
@@ -25,4 +25,4 @@ export async function copyTemplate(config) {
     spinner.fail("Failed to copy project template");
     throw error;
   }
-}
+}   
